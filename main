@@ -1,0 +1,38 @@
+import random
+
+# Lists for proverb generation
+beginnings = [
+    "The early bird",
+    "If you try long enough,",
+    "A rolling stone",
+    "Don’t put off till tomorrow what",
+    "Patience and hard work"
+]
+
+middles = [
+    "catches the worm,",
+    "something might work out,",
+    "gathers no moss,",
+    "you can do today,",
+    "always pay off,"
+]
+
+ends = [
+    "but only if it doesn't oversleep.",
+    "or not—it’s a gamble.",
+    "but it sure gets tired.",
+    "because tomorrow might not come.",
+    "but first, grab a coffee."
+]
+
+def generate_proverb():
+    """Generates a random absurd proverb"""
+    beginning = random.choice(beginnings)
+    middle = random.choice(middles)
+    end = random.choice(ends)
+    return f"{beginning} {middle} {end}"
+
+# Generate and print a random proverb
+if __name__ == "__main__":
+    print("The Great Proverb Generator says:")
+    print(generate_proverb())
